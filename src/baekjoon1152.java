@@ -4,17 +4,19 @@ public class baekjoon1152 {
     public static void main(String []args){
         Scanner scan = new Scanner(System.in);
         String input = scan.nextLine();
-        int word = 0;
-        for(int i = 1 ; i<input.length();i++){
-            char d = input.charAt(i-1);
-            char c = input.charAt(i);
-            if(String.valueOf(c).equals(" ")  && !String.valueOf(d).equals(" ")){
-                word++;
+        int count = 0;
+        for(int i = 0; i < input.length()-1; i++){
+            if(input.charAt(i) != ' ' && input.charAt(i+1) == ' '){
+                count++;
             }
         }
-        if(word != 0){
-            word++;
+        if(input.charAt(input.length()-1) == ' '){
+            System.out.println(count);
+        }else if(input.charAt(input.length()-1) != ' '){
+            System.out.println(count+1);
+        }else if(count == 0){
+            System.out.println(0);
         }
-        System.out.println(word);
     }
 }
+
