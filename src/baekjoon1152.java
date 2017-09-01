@@ -1,5 +1,5 @@
+// 1152번 : 단어의 개수
 import java.util.Scanner;
-
 public class baekjoon1152 {
     public static void main(String []args){
         Scanner scan = new Scanner(System.in);
